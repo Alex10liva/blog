@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<%- include('partials/head') %>
+
+  <body>
+    <nav class="navbar">
+      <div class="wrapper-navbar">
+        <div class="content">
+          <h1>Blog.</h1>
+        </div>
+        <!-- <ul>
+          <li>
+          </li> -->
+        <!-- <li><a href="/sobre-mi">Sobre mí</a></li>
+          <li><a href="/tecnologias">Tecnologías</a></li>
+          <li><a href="/proyectos">Proyectos</a></li>
+          <li><a href="/blog" class="active">Blog</a></li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="navbar-mobile" style="display: none;">
+      <div class="wrapper-navbar">
+        <div class="content">
+          <h1>Blog.</h1>
+        </div>
+      </div>
+    </nav>
+    <div class="blog-page">
+      <div class="wrapper">
+        <div class="content">
+          <!-- Search mobile -->
+          <form action="/results" class="search-mobile">
+            <div class="search-icon">
+              <svg class="w-8 h-8 md:w-12 md:h-12" fill="none" height="24" shape-rendering="geometricPrecision"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                viewBox="0 0 24 24" width="24">
+                <path d="M11 17.25a6.25 6.25 0 110-12.5 6.25 6.25 0 010 12.5z"></path>
+                <path d="M16 16l4.5 4.5"></path>
+              </svg>
+            </div>
+            <label for="search-mobile">
+              <input type="search" name="search" id="search-mobile" placeholder="Ingresa aquí tu tema de interés..."
+                required>
+            </label>
+          </form>
+          <header>
+            <h2 class="title">Post recientes</h2>
+            <!-- Search desktop -->
+            <form action="/results" class="search-desktop">
+              <div class="search-icon">
+                <svg class="w-8 h-8 md:w-12 md:h-12" fill="none" height="24" shape-rendering="geometricPrecision"
+                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  viewBox="0 0 24 24" width="24">
+                  <path d="M11 17.25a6.25 6.25 0 110-12.5 6.25 6.25 0 010 12.5z"></path>
+                  <path d="M16 16l4.5 4.5"></path>
+                </svg>
+              </div>
+              <label for="search">
+                <input type="search" name="search" id="search" placeholder="Ingresa aquí tu tema de interés..."
+                  required>
+              </label>
+            </form>
+          </header>
+          <div class="recent-posts">
+            <% for(let post of posts) {%>
+              <article>
+                <a class="anchor-post" href=" /<%=post.slug %>">
+                  <main>
+                    <h2>
+                      <%= post.title %>
+                    </h2>
+                    <p>
+                      <%= post.summary %>
+                    </p>
+                  </main>
+                  <div class="footer">
+                    <div class="tags">
+                      <% for(let tag of post.tags) {%>
+                        <span class="<%= tagClasses[tag] %>">
+                          <%= tag %>
+                        </span>
+                        <%}%>
+                    </div>
+                    <div class="date">
+                      <%= post.date %>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <%}%>
+          </div>
+        </div>
+      </div>
+      <%- include('partials/footer') %>
+    </div>
+  </body>
+
+  </html>
