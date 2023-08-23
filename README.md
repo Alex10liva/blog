@@ -1,4 +1,4 @@
-# Blog de Tecnología IncreTech
+# Blog sobre tecnología
 
 ¡Bienvenido al repositorio de mi Blog! Este blog se centra en ofrecer artículos sobre las últimas novedades en tecnología, tutoriales útiles, entre otros temas.
 
@@ -10,7 +10,7 @@ Actualmente, el blog está activo (puedes acceder al blog en [https://blog-02pp.
 
 Para ejecutar el blog localmente, sigue estos pasos:
 
-1. Clona este repositorio: `https://github.com/Alex10liva/blog`.
+1. Clona este repositorio: `https://github.com/Alex10liva/blog.git`.
 2. Instala las dependencias: `npm install`.
 3. Inicia el servidor local: `node index.js`.
 
@@ -29,5 +29,3 @@ Para ejecutar el blog localmente, sigue estos pasos:
 ## Contacto
 
 Si tienes preguntas, ideas para colaboraciones o encuentras algún problema, contáctame en alejandro.olivaoa@udlap.mx.
-
-¡Esperamos que disfrutes explorando el mundo de la tecnología con nosotros!
