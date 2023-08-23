@@ -9,9 +9,9 @@ const md = markdownIt({
   highlight: function (code, lang) {
     if (lang && hljs.getLanguage(lang)) {
       try {
-        return `<pre class="hljs"><code>${
+        return `<div class="code-wrapper"><pre class="hljs"><p>${lang}</p><code>${
           hljs.highlight(code, { language: lang, ignoreIllegals: true }).value
-        }</code></pre>`;
+        }</code></pre></div>`;
       } catch (__) {}
     }
 

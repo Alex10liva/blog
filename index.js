@@ -14,6 +14,7 @@ const tagClasses = {
   Node: "node",
   Web: "web",
   Git: "git",
+  CSS: "css",
 };
 
 // Función para convertir la cadena de fecha a objeto Date

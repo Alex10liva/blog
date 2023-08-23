@@ -1,6 +1,6 @@
 :root {
   --background-color-dark: #1b1b1b;
-  --main-white: #EFEFEF;
+  --main-white: #efefef;
 }
 
 body {
@@ -8,10 +8,9 @@ body {
   padding: 0;
   color: var(--main-white);
   font-size: 14px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--background-color-dark);
 }
-
 
 ul li {
   list-style: none;
@@ -46,7 +45,11 @@ a {
 
   border-radius: 15px;
   border: 1px solid #262626;
-  background: linear-gradient(148deg, rgba(37, 37, 37, 0.20) 0%, rgba(37, 37, 37, 0.10) 100%);
+  background: linear-gradient(
+    148deg,
+    rgba(37, 37, 37, 0.2) 0%,
+    rgba(37, 37, 37, 0.1) 100%
+  );
   box-shadow: 0px 8px 32px 0px rgba(5, 5, 5, 0.15);
   margin-top: 5px;
 }
@@ -61,7 +64,11 @@ a {
 
   border-radius: 15px;
   border: 1px solid #262626;
-  background: linear-gradient(148deg, rgba(37, 37, 37, 0.20) 0%, rgba(37, 37, 37, 0.10) 100%);
+  background: linear-gradient(
+    148deg,
+    rgba(37, 37, 37, 0.2) 0%,
+    rgba(37, 37, 37, 0.1) 100%
+  );
   box-shadow: 0px 8px 32px 0px rgba(5, 5, 5, 0.15);
 }
 
@@ -70,7 +77,11 @@ a {
 
   border-radius: 15px;
   border: 1px solid #262626;
-  background: linear-gradient(148deg, rgba(37, 37, 37, 0.20) 0%, rgba(37, 37, 37, 0.10) 100%);
+  background: linear-gradient(
+    148deg,
+    rgba(37, 37, 37, 0.2) 0%,
+    rgba(37, 37, 37, 0.1) 100%
+  );
   box-shadow: 0px 8px 32px 0px rgba(5, 5, 5, 0.15);
 }
 
@@ -93,7 +104,7 @@ a {
 }
 
 .navbar a:not(.active) {
-  color: #AFAFAF;
+  color: #afafaf;
 }
 
 .navbar a:hover {
@@ -113,16 +124,17 @@ a {
 h1 {
   text-align: center;
   font-size: 40px;
-  background: linear-gradient(90deg, #F64EE6 40%, #FF8F51 80%);
+  background: linear-gradient(90deg, #f64ee6 40%, #ff8f51 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
 }
 
-p>code,
-h2>code,
-h3>code {
+p > code,
+h2 > code,
+h3 > code,
+strong > code {
   background-color: #f64ee530;
   padding: 1px 8px 1px 8px;
   border-radius: 10px;
@@ -159,7 +171,6 @@ header {
   justify-content: space-between;
 }
 
-
 #search {
   outline: none;
   padding: 15px 20px 15px 50px;
@@ -172,7 +183,6 @@ header {
   color: #eeeeee;
   transition: border-color 0.3s ease, color 0.3s ease;
 }
-
 
 #search-mobile {
   outline: none;
@@ -193,7 +203,6 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
-
 
 #search:focus,
 #search-mobile:focus {
@@ -271,7 +280,30 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .wrapper-post pre {
-  padding: 20px;
+  max-width: 650px;
+}
+.code-wrapper p {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  margin-bottom: 0 !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  font-size: 12px !important;
+  color: #9b9b9b;
+}
+
+.code-wrapper p::before {
+  content: "";
+  width: 120%;
+  height: 1px;
+  background-color: #9b9b9b;
+  bottom: -8px;
+  position: absolute;
+}
+
+.code-wrapper pre {
+  padding: 60px 20px 20px 20px;
   background-color: #262626;
   border-radius: 15px;
   margin: 0;
@@ -298,7 +330,8 @@ input[type="search"]::-webkit-search-results-decoration {
   min-height: 240px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .recent-posts article:hover {
@@ -314,7 +347,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .recent-posts article p {
   font-size: 14px;
-  color: #E3E3E3;
+  color: #e3e3e3;
   max-height: 85px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -343,14 +376,15 @@ input[type="search"]::-webkit-search-results-decoration {
 .recent-posts article .tags .web,
 .recent-posts article .tags .js,
 .recent-posts article .tags .node,
-.recent-posts article .tags .git {
+.recent-posts article .tags .git,
+.recent-posts article .tags .css {
   position: relative;
 }
 
 .recent-posts article .tags .web::before {
   content: "";
   position: absolute;
-  background-color: #E2E8F0;
+  background-color: #e2e8f0;
   width: 10px;
   height: 30%;
   top: 36%;
@@ -366,7 +400,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .recent-posts article .tags .js::before {
   content: "";
   position: absolute;
-  background-color: #FEF08A;
+  background-color: #fef08a;
   width: 10px;
   height: 30%;
   top: 36%;
@@ -382,7 +416,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .recent-posts article .tags .node::before {
   content: "";
   position: absolute;
-  background-color: #4D7C0F;
+  background-color: #4d7c0f;
   width: 10px;
   height: 30%;
   top: 36%;
@@ -393,7 +427,18 @@ input[type="search"]::-webkit-search-results-decoration {
 .recent-posts article .tags .git::before {
   content: "";
   position: absolute;
-  background-color: #F1502F;
+  background-color: #f1502f;
+  width: 10px;
+  height: 30%;
+  top: 36%;
+  left: 0;
+  border-radius: 2px;
+}
+
+.recent-posts article .tags .css::before {
+  content: "";
+  position: absolute;
+  background-color: #2965f1;
   width: 10px;
   height: 30%;
   top: 36%;
@@ -422,13 +467,17 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-top: 32px;
   width: 140px;
 
-
   border-radius: 15px;
   border: 1px solid #262626;
   background: var(--background-color-dark);
-  background: linear-gradient(148deg, rgba(37, 37, 37, 0.20) 0%, rgba(37, 37, 37, 0.10) 100%);
+  background: linear-gradient(
+    148deg,
+    rgba(37, 37, 37, 0.2) 0%,
+    rgba(37, 37, 37, 0.1) 100%
+  );
   box-shadow: 0px 8px 32px 0px rgba(5, 5, 5, 0.15);
-  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .back-button:hover {
@@ -474,18 +523,23 @@ svg.bi.bi-arrow-left-short {
 }
 
 .post-meta .js {
-  background-color: #FEF08A;
-  color: #854D0E;
+  background-color: #fef08a;
+  color: #854d0e;
 }
 
 .post-meta .node {
-  background-color: #ECFCCB;
-  color: #4D7C0F;
+  background-color: #ecfccb;
+  color: #4d7c0f;
 }
 
 .post-meta .git {
-  background-color: #F1502F;
+  background-color: #f1502f;
   color: #3e2c00;
+}
+
+.post-meta .css {
+  background-color: #2965f1;
+  color: #ebebeb;
 }
 
 .post-meta .date {
@@ -518,7 +572,7 @@ img {
   width: 100%;
 }
 
-figure img+figcaption {
+figure img + figcaption {
   padding-top: 4px;
 }
 
@@ -540,7 +594,8 @@ ul.tags-list a {
   padding: 20px 30px;
   border-radius: 15px;
   border: 1px solid #262626;
-  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 ul.tags-list a:hover {
@@ -602,17 +657,33 @@ footer {
   height: 49px;
 }
 
-
 footer .content {
   max-width: 1024px;
   margin: 0 auto;
   display: flex;
   padding: 16px 0;
   justify-content: center;
+  color: #b1b1b1;
 }
 
 footer a {
   text-decoration: underline;
+  color: #b1b1b1;
+}
+
+.code-wrapper {
+  position: relative;
+}
+
+pre::-webkit-scrollbar {
+  width: auto;
+  height: 10px;
+}
+
+pre::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  width: 1px !important;
+  background-color: #4e4e4e;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -676,6 +747,9 @@ footer a {
   .wrapper-post .left {
     width: auto;
   }
+  .wrapper-post pre {
+    max-width: 520px;
+  }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
@@ -688,7 +762,6 @@ footer a {
   .wrapper-post {
     padding: 0 15px;
   }
-
 }
 
 @media only screen and (min-width: 1200px) {
