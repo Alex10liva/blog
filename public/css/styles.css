@@ -295,7 +295,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .code-wrapper p::before {
   content: "";
-  width: 120%;
+  width: 100%;
   height: 1px;
   background-color: #9b9b9b;
   bottom: -8px;
@@ -368,23 +368,15 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .recent-posts article .tags span {
-  padding: 8px 16px;
+  padding: 8px 10px 8px 20px;
   font-weight: 600;
   font-size: 14px;
-}
-
-.recent-posts article .tags .web,
-.recent-posts article .tags .js,
-.recent-posts article .tags .node,
-.recent-posts article .tags .git,
-.recent-posts article .tags .css {
   position: relative;
 }
 
-.recent-posts article .tags .web::before {
+.recent-posts article .tags span::before {
   content: "";
   position: absolute;
-  background-color: #e2e8f0;
   width: 10px;
   height: 30%;
   top: 36%;
@@ -392,58 +384,24 @@ input[type="search"]::-webkit-search-results-decoration {
   border-radius: 2px;
 }
 
-/* .recent-posts article .tags .js {
-  background-color: #FEF08A;
-  color: #854D0E;
-} */
+.recent-posts article .tags .web::before {
+  background-color: #e2e8f0;
+}
 
 .recent-posts article .tags .js::before {
-  content: "";
-  position: absolute;
   background-color: #fef08a;
-  width: 10px;
-  height: 30%;
-  top: 36%;
-  left: 0;
-  border-radius: 2px;
 }
 
-/* .recent-posts article .tags .node {
-  background-color: #ECFCCB;
-  color: #4D7C0F;
-} */
-
 .recent-posts article .tags .node::before {
-  content: "";
-  position: absolute;
   background-color: #4d7c0f;
-  width: 10px;
-  height: 30%;
-  top: 36%;
-  left: 0;
-  border-radius: 2px;
 }
 
 .recent-posts article .tags .git::before {
-  content: "";
-  position: absolute;
   background-color: #f1502f;
-  width: 10px;
-  height: 30%;
-  top: 36%;
-  left: 0;
-  border-radius: 2px;
 }
 
 .recent-posts article .tags .css::before {
-  content: "";
-  position: absolute;
   background-color: #2965f1;
-  width: 10px;
-  height: 30%;
-  top: 36%;
-  left: 0;
-  border-radius: 2px;
 }
 
 .recent-posts article .date {
