@@ -9,9 +9,18 @@ const md = markdownIt({
   highlight: function (code, lang) {
     if (lang && hljs.getLanguage(lang)) {
       try {
-        return `<div class="code-wrapper"><pre class="hljs"><p>${lang}</p><code>${
-          hljs.highlight(code, { language: lang, ignoreIllegals: true }).value
-        }</code></pre></div>`;
+        const highlightedCode = hljs.highlight(code, {
+          language: lang,
+          ignoreIllegals: true,
+        }).value;
+
+        // Aquí vamos a buscar y resaltar comandos de git en Bash
+        const highlightedCodeWithCustomClass = highlightedCode.replace(
+          /\b(clone|init|add|commit|status|branch|checkout|merge|pull|push|diff|restore|reset|stash|pop|txt|config)\b/g,
+          '<span class="hljs-built_in">$&</span>'
+        );
+
+        return `<div class="code-wrapper"><pre class="hljs"><p>${lang}</p><code>${highlightedCodeWithCustomClass}</code></pre></div>`;
       } catch (__) {}
     }
 

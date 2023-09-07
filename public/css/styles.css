@@ -121,10 +121,12 @@ a {
   background-color: var(--main-white);
 }
 
-h1 {
+.navbar h1,
+.navbar-mobile h1 {
   text-align: center;
   font-size: 40px;
-  background: linear-gradient(90deg, #f64ee6 40%, #ff8f51 80%);
+  /* background: linear-gradient(90deg, #f64ee6 40%, #ff8f51 80%); */
+  background: linear-gradient(90deg, #2671e0 40%, #26e0d5 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -180,8 +182,24 @@ header {
   border-color: #262626;
   border-style: solid;
   border-width: 1px;
-  color: #eeeeee;
+  color: #eeeeee !important;
   transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  border-color: #262626;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-text-fill-color: #eeeeee !important;
+  -webkit-box-shadow: 0 0 0 1000px #262626 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:autofill {
+  border: 3px solid darkorange;
 }
 
 #search-mobile {
@@ -306,7 +324,7 @@ input[type="search"]::-webkit-search-results-decoration {
   padding: 60px 20px 20px 20px;
   background-color: #262626;
   border-radius: 15px;
-  margin: 0;
+  margin-bottom: 32px;
 }
 
 .wrapper .title,
@@ -326,6 +344,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .recent-posts article {
   padding: 10px 30px;
   border: 1px solid #262626;
+  background-color: var(--background-color-dark);
   border-radius: 10px;
   min-height: 240px;
   display: flex;
@@ -512,6 +531,10 @@ svg.bi.bi-arrow-left-short {
 .markdown-content li {
   font-size: 18px;
   margin-bottom: 5px;
+}
+
+.markdown-content a {
+  text-decoration: underline;
 }
 
 figure {
