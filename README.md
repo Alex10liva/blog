@@ -1,31 +1,31 @@
-# Blog sobre tecnología
+# Technology Blog
 
-¡Bienvenido al repositorio de mi Blog! Este blog se centra en ofrecer artículos sobre las últimas novedades en tecnología, tutoriales útiles, entre otros temas.
+Welcome to my Blog repository! This blog focuses on providing articles about the latest technology trends, useful tutorials, among other topics.
 
-## Estado del Proyecto
+## Project status
 
-Actualmente, el blog está activo (puedes acceder al blog en [https://blog-02pp.onrender.com/](https://blog-02pp.onrender.com/)). Sigo trabajando para agregar contenido periódicamente.
+Currently, the blog is active (you can access the blog at [https://blog-02pp.onrender.com/](https://blog-02pp.onrender.com/)). I am still working to add content periodically.
 
-## Instalación
+## Installation
 
-Para ejecutar el blog localmente, sigue estos pasos:
+To run the blog locally, follow these steps:
 
-1. Clona este repositorio: `https://github.com/Alex10liva/blog.git`.
-2. Instala las dependencias: `npm install`.
-3. Inicia el servidor local: `node index.js`.
+1. Clone this repository: `https://github.com/Alex10liva/blog.git`.
+2. Install dependencies: `npm install`.
+3. Start the local server: `node index.js`.
 
-## Estructura del Repositorio
+## Repository structure
 
-- `/posts`: Aquí se encuentran todos los artículos publicados.
-- `/public`: Contiene los archivos CSS e imágenes utilizados en el blog.
-- `/views`: Contiene las diversas páginas que se renderizan en el navegador.
-- `/views/partials`: Aquí se almacenan los componentes reutilizables que aparecen en varias partes del sitio.
+- `/posts`: This is where all published articles are located.
+- `/public`: Contains CSS files and images used in the blog.
+- `/views`: Contains various pages rendered in the browser.
+- `/views/partials`: Here are stored reusable components that appear in various parts of the site.
 
-## Tecnologías Utilizadas
+## Technologies used
 
 - EJS, CSS3, JavaScript
 - Node JS
 
-## Contacto
+## Contact
 
-Si tienes preguntas, ideas para colaboraciones o encuentras algún problema, contáctame en alejandro.olivaoa@udlap.mx.
+If you have questions, collaboration ideas, or encounter any issues, contact me at [https://linkedin.com/in/alejandro-oliva-ochoa](https://linkedin.com/in/alejandro-oliva-ochoa) or alejandro.olivaoa@udlap.mx.
