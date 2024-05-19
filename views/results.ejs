@@ -10,13 +10,13 @@
             <path fill-rule="evenodd"
               d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
           </svg>
-          Posts recientes</a>
+          Recent posts</a>
       </div>
       <div class="wrapper-search">
         <div class="content">
           <% if (Object.keys(posts).length !==0) { %>
             <header>
-              <h2 class="title">Resultados para:
+              <h2 class="title">Results for:
                 <i>
                   <%= searchTerm %>
                 </i>
@@ -60,12 +60,12 @@
                 <path
                   d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm-2.715 5.933a.5.5 0 0 1-.183-.683A4.498 4.498 0 0 1 8 9.5a4.5 4.5 0 0 1 3.898 2.25.5.5 0 0 1-.866.5A3.498 3.498 0 0 0 8 10.5a3.498 3.498 0 0 0-3.032 1.75.5.5 0 0 1-.683.183zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z" />
               </svg>
-              <h2>¡Vaya!</h2>
-              <h3> Parece que aún no tenemos nada sobre
+              <h2>Oops!</h2>
+              <h3> It looks like we don't have anything on
                 <i>
-                  <%= searchTerm %>.
+                  <%= searchTerm %>
                 </i>
-                Pero no te preocupes, ¿qué tal si vuelves después? Siempre estamos añadiendo cosas nuevas.
+                just yet. But don't worry, why not check back later? We're always adding new stuff.
               </h3>
               <% }; %>
           </div>
